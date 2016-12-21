@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ChocoPicker - Contest Winner Picker </title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<div class="container" ng-app="chocopicker">
+		<div class="row" ng-controller="WinnerCtrl as vm">
+			<div class="col-md-1">
+				
+			</div>
+			<div class="col-md-10 text-center add-gutter-top app">
+				<img src="images/chocobelen.png">
+				
+				<h1>{{vm.title}}</h1>
+				
+				<div class="col-md-12 add-gutter-top winner" ng-if="vm.working">
+					El ganador del concurso es: <br/>
+					<strong>@bitzor</strong>
+				</div>
+				<div class="col-md-12 add-gutter-top no-winner" ng-if="!vm.working">
+					
+
+				</div>
+				<form class="form-group">
+					<button class="btn btn-success btn-lg" ng-disabled="vm.working" ng-click="vm.choose()"> Escoger Ganador </button>
+				</form>
+			</div>
+			<div class="col-md-1">
+				
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

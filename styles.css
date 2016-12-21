@@ -1,0 +1,23 @@
+.app{
+
+}
+
+.banner-r{
+	background: green url('./images/snowman.png') repeat;
+	height: 1250px;
+	width: 30%;	
+}
+
+.banner-l{
+	background: blue url('./images/snowman.png') repeat;
+	height: 1250px;
+}
+
+.winner{
+	background: #fff;
+}
+
+.winner strong {
+	font-size: 45px;
+	font-weight: bold;
+}
