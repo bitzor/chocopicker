@@ -15,33 +15,49 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </head>
-<body>
-	<div class="container" ng-app="chocopicker">
-		<div class="row" ng-controller="WinnerCtrl as vm">
-			<div class="col-md-1">
-				
-			</div>
-			<div class="col-md-10 text-center add-gutter-top app">
-				<img src="images/chocobelen.png">
-				
-				<h1>{{vm.title}}</h1>
-				
-				<div class="col-md-12 add-gutter-top winner" ng-if="vm.working">
-					El ganador del concurso es: <br/>
-					<strong>@bitzor</strong>
-				</div>
-				<div class="col-md-12 add-gutter-top no-winner" ng-if="!vm.working">
-					
 
-				</div>
-				<form class="form-group">
-					<button class="btn btn-success btn-lg" ng-disabled="vm.working" ng-click="vm.choose()"> Escoger Ganador </button>
-				</form>
-			</div>
+<body>
+	<div class="container" ng-app="chocopicker" ng-cloak>
+		
+		<div class="row" ng-controller="WinnerCtrl as vm">
+
 			<div class="col-md-1">
-				
+				<img src="images/snowman-l.png" class="banner-l" />
 			</div>
+
+			<div class="col-md-10 text-center main">
+
+				<div class="app">
+
+					<img src="images/chocobelen.png">
+					
+					<h1>{{vm.title}}</h1>
+					
+					<img src="images/concurso.jpg" />
+
+
+					<div class="col-md-12 add-gutter-top winner" ng-if="vm.working">
+						El ganador del concurso es: <br/>
+						<img ng-if ="!vm.winner.username" src="images/loading.gif" />
+						<strong ng-if="vm.winner.username">@{{vm.winner.username}}</strong>
+
+					</div>
+				</div>
+
+
+				<form class="form-group add-gutter-top">
+					<button class="btn btn-success btn-lg" ng-disabled="vm.working" ng-click="vm.choose()"> Escoger Ganador </button>
+					<button class="btn btn-danger btn-lg" ng-click="vm.reset()"> Reset </button>
+				</form>
+
+			</div>
+
+			<div class="col-md-1">
+				<img src="images/snowman-r.png" class="banner-r" />
+			</div>
+		
 		</div>
+	
 	</div>
 </body>
 
