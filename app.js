@@ -5,7 +5,7 @@ app.controller('WinnerCtrl', ['$timeout', function($timeout){
 	var vm = this;
 
 	//Private attributes
-
+	vm.index = 0;
 	vm.winner = {};
 	vm.working = false;
 	vm.title = "¡Concurso Navideño! #chococanto";
@@ -37,6 +37,26 @@ app.controller('WinnerCtrl', ['$timeout', function($timeout){
 		{
 			username: 'angeliglopezv',
 			video: 'https://www.instagram.com/p/BOSjcaODnB4'
+		},				
+		{
+			username: 'greciakmolina',
+			video: 'https://www.instagram.com/p/BOSjcaODnB4'
+		},			
+		{
+			username: 'josecheomendoza',
+			video: 'https://www.instagram.com/p/BOSjcaODnB4'
+		},				
+		{
+			username: 'musiufusion',
+			video: 'https://www.instagram.com/p/BOSjcaODnB4'
+		},				
+		{
+			username: 'marquinaindira',
+			video: 'https://www.instagram.com/p/BOSjcaODnB4'
+		},			
+		{
+			username: 'carlosmeneses1984',
+			video: 'https://www.instagram.com/p/BOSjcaODnB4'
 		},		
 	];
 
@@ -58,9 +78,9 @@ app.controller('WinnerCtrl', ['$timeout', function($timeout){
 
 	function pickWinner()
 	{
-		index = Math.random() * vm.contesters.length;
-		index = Math.round(index);
-		vm.winner = vm.contesters[index];
+		vm.index = Math.random() * vm.contesters.length;
+		vm.index = Math.round(vm.index);
+		vm.winner = vm.contesters[vm.index];
 	}
 
 

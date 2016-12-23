@@ -27,7 +27,7 @@
 				<img src="images/snowman-l.png" class="banner-l" />
 			</div>
 
-			<div class="col-md-10 text-center main">
+			<div class="col-md-9 text-center main">
 
 				<div class="app">
 
@@ -41,7 +41,7 @@
 					<div class="col-md-12 winner" ng-if="vm.working">
 						<h2>El ganador del Concurso #Chococanto</h2><br/>
 						<img ng-if ="!vm.winner.username" src="images/loading.gif" />
-						<strong ng-if="vm.winner.username">@{{vm.winner.username}}</strong> <br>
+						<strong ng-if="vm.winner.username">#{{vm.index + 1}} - @{{vm.winner.username}}</strong> <br>
 						<img class="emoji" ng-if="vm.winner.username" src="https://media.giphy.com/media/11iZvwSWf1Z3pu/giphy.gif" />
 					</div>
 
